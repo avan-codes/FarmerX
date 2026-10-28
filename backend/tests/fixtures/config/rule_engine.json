@@ -1,0 +1,6 @@
+{
+  "engine_version": "1.0.0",
+  "rounding": {"quantity_step": "0.1", "precision": 2},
+  "limits": {"max_dose_per_action": {"value": "500", "unit": "kg"}},
+  "cautions": {"dose_capped": "caution.dose_capped"}
+}

@@ -1,0 +1,16 @@
+{
+  "crop.testcrop": "Test Crop", "crop.wheat": "Wheat", "crop.rice": "Rice",
+  "region.TESTREGION": "Test Region", "region.IN-PB": "Punjab", "region.IN-MH": "Maharashtra",
+  "stage.basal": "basal",
+  "timing.basal": "Basal (at sowing)", "method.broadcast": "Broadcast",
+  "unit.kg": "kg", "unit.g": "g", "unit.acre": "acre",
+  "fert.urea": "Urea", "fert.dap": "DAP",
+  "param.N": "Nitrogen",
+  "reason.n_low_basal": "Nitrogen is low at the {stage} stage, so {fertilizer} is applied as a basal dose.",
+  "caution.dose_capped": "The calculated quantity was capped at the safe maximum for a single application.",
+  "ai.unavailable": "The explanation assistant is temporarily unavailable. Your fertilizer plan above is still valid.",
+  "ai.no_rule": "No validated fertilizer dose is available for these inputs yet.",
+  "ai.fallback_intro": "For {crop} at the {stage} stage on {area}:",
+  "ai.fallback_item": "Apply {quantity} of {fertilizer} as {timing} by {method}.",
+  "ai.answer_guardrail_fallback": "I can only explain the validated plan. Here is the plan summary:"
+}

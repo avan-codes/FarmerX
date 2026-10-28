@@ -1,0 +1,3 @@
+{"stages":[
+  {"id":"basal","label_key":"stage.basal","crop_ids":["testcrop","wheat","rice"],"region_ids":["TESTREGION","IN-PB","IN-MH"],"order":1}
+]}

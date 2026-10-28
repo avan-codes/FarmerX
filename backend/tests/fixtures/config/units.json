@@ -1,0 +1,13 @@
+{
+  "area_base_unit": "hectare",
+  "quantity_base_unit": "kg",
+  "area": [
+    {"id": "hectare", "label_key": "unit.hectare", "to_base_factor": "1", "available": true},
+    {"id": "acre", "label_key": "unit.acre", "to_base_factor": "0.40468564224", "available": true}
+  ],
+  "quantity": [
+    {"id": "kg", "label_key": "unit.kg", "to_base_factor": "1", "available": true},
+    {"id": "g", "label_key": "unit.g", "to_base_factor": "0.001", "available": true}
+  ],
+  "basis": {"per_acre": {"unit": "acre"}, "per_hectare": {"unit": "hectare"}}
+}

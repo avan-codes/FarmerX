@@ -1,0 +1,5 @@
+{"regions":[
+  {"id":"TESTREGION","label_key":"region.TESTREGION"},
+  {"id":"IN-PB","label_key":"region.IN-PB","country":"IN","level":"state"},
+  {"id":"IN-MH","label_key":"region.IN-MH","country":"IN","level":"state"}
+]}

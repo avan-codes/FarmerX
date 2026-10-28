@@ -1,0 +1,4 @@
+{"fertilizers":[
+  {"id":"urea","label_key":"fert.urea","unit":"kg","active":true},
+  {"id":"dap","label_key":"fert.dap","unit":"kg","active":true}
+]}

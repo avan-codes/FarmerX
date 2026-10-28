@@ -1,0 +1,7 @@
+{"parameters":[
+  {"id":"N","label_key":"param.N","unit":"kg/ha","min":0,"max":1500,"required":true},
+  {"id":"P","label_key":"param.P","unit":"kg/ha","min":0,"max":1000,"required":true},
+  {"id":"K","label_key":"param.K","unit":"kg/ha","min":0,"max":1500,"required":true},
+  {"id":"pH","label_key":"param.pH","unit":"pH","min":0,"max":14,"required":true},
+  {"id":"OC","label_key":"param.OC","unit":"%","min":0,"max":20,"required":true}
+]}

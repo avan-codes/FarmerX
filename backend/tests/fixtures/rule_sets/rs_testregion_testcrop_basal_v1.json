@@ -1,0 +1,26 @@
+{
+  "rule_set_id": "rs_testregion_testcrop_basal_v1",
+  "version": "1.0.0",
+  "status": "approved",
+  "crop_id": "testcrop",
+  "region_id": "TESTREGION",
+  "stage_id": "basal",
+  "effective_from": "2020-01-01",
+  "source": {"document": "TEST FIXTURE ONLY", "publisher": "test-suite",
+             "url": "https://example.invalid/fixture"},
+  "validated_by": {"agronomist": "test-suite", "date": "2020-01-01"},
+  "thresholds_ref": "soil_thresholds.json#TESTREGION",
+  "rules": [
+    {
+      "rule_id": "r_fixture_n_low",
+      "when": {"all": [{"param": "N", "op": "lt", "value_ref": "thresholds.N.low"}]},
+      "then": [{
+        "action_id": "a_fixture_urea_basal",
+        "fertilizer_id": "urea",
+        "dose": {"value": "50", "unit": "kg", "basis": "per_acre"},
+        "timing": "basal", "method": "broadcast",
+        "reason_key": "reason.n_low_basal", "cautions": []
+      }]
+    }
+  ]
+}
