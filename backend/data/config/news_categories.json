@@ -1,0 +1,9 @@
+{
+  "categories": {
+    "crops": ["wheat", "rice", "paddy", "maize", "cotton", "sugarcane", "pulses", "oilseed", "millet", "crop"],
+    "government_schemes": ["scheme", "pm-kisan", "pmfby", "kisan credit", "subsidy", "msp", "minimum support price", "yojana"],
+    "weather": ["rain", "monsoon", "weather", "drought", "flood", "heatwave", "imd"],
+    "agri_tech": ["drone", "ai ", "artificial intelligence", "precision farming", "soil health card", "agri-tech", "startup"],
+    "markets": ["mandi", "price", "export", "import", "arrival", "apmc", "agmarknet", "market"]
+  }
+}

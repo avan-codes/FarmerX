@@ -1,0 +1,22 @@
+{
+  "regions": {
+    "IN-PB": {"parameters": {
+      "N":  {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"},
+      "P":  {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"},
+      "K":  {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"},
+      "OC": {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"}
+    }},
+    "IN-MH": {"parameters": {
+      "N":  {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"},
+      "P":  {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"},
+      "K":  {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"},
+      "OC": {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"}
+    }},
+    "TESTREGION": {"parameters": {
+      "N":  {"validated": true, "low_below": "150", "high_from": "300"},
+      "P":  {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"},
+      "K":  {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"},
+      "OC": {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"}
+    }}
+  }
+}

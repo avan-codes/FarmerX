@@ -1,0 +1,7 @@
+{
+  "language_names": {
+    "en": "English", "hi": "Hindi", "bn": "Bengali", "mr": "Marathi",
+    "pa": "Punjabi", "ta": "Tamil", "te": "Telugu"
+  },
+  "summary_max_sentences": 5
+}

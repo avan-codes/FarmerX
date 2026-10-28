@@ -1,0 +1,19 @@
+{
+  "crop.wheat": "गेहूँ", "crop.rice": "धान", "crop.testcrop": "टेस्ट फसल",
+  "region.IN-PB": "पंजाब", "region.IN-MH": "महाराष्ट्र", "region.TESTREGION": "टेस्ट क्षेत्र",
+  "stage.basal": "बुवाई के समय", "stage.vegetative": "वानस्पतिक अवस्था", "stage.flowering": "फूल अवस्था",
+  "timing.basal": "बुवाई के समय (बेसल)", "timing.top_dress": "टॉप ड्रेसिंग",
+  "method.broadcast": "छिड़काव", "method.band": "पंक्ति में डालना",
+  "unit.kg": "किग्रा", "unit.g": "ग्राम", "unit.acre": "एकड़", "unit.hectare": "हेक्टेयर",
+  "fert.urea": "यूरिया", "fert.dap": "डीएपी", "fert.mop": "एमओपी", "fert.ssp": "एसएसपी",
+  "fert.vermicompost": "वर्मीकम्पोस्ट",
+  "param.N": "नाइट्रोजन", "param.P": "फॉस्फोरस", "param.K": "पोटैशियम",
+  "param.pH": "पीएच", "param.OC": "जैविक कार्बन",
+  "reason.n_low_basal": "{stage} अवस्था में नाइट्रोजन कम है, इसलिए {fertilizer} बेसल डोज़ के रूप में दिया गया है।",
+  "caution.dose_capped": "गणना की गई मात्रा को एक बार में सुरक्षित अधिकतम तक सीमित किया गया है।",
+  "ai.unavailable": "व्याख्या सहायक अभी उपलब्ध नहीं है। ऊपर दी गई आपकी खाद योजना अभी भी मान्य है।",
+  "ai.no_rule": "इन इनपुट के लिए अभी कोई सत्यापित खाद मात्रा उपलब्ध नहीं है।",
+  "ai.fallback_intro": "{crop} के लिए {stage} अवस्था में {area} पर:",
+  "ai.fallback_item": "{fertilizer} की {quantity} मात्रा {timing} पर {method} द्वारा दें।",
+  "ai.answer_guardrail_fallback": "मैं केवल सत्यापित योजना की व्याख्या कर सकता हूँ। योजना का सारांश यह है:"
+}

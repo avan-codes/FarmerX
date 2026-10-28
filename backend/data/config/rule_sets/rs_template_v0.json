@@ -1,0 +1,29 @@
+{
+  "rule_set_id": "rs_<region>_<crop>_<stage>_v1",
+  "version": "1.0.0",
+  "status": "draft",
+  "crop_id": "<TBD>",
+  "region_id": "<TBD>",
+  "stage_id": "<TBD>",
+  "effective_from": "2026-01-01",
+  "source": {"document": "<TBD>", "publisher": "<TBD>", "url": "<TBD>"},
+  "validated_by": {"agronomist": "<TBD>", "date": "<TBD>"},
+  "thresholds_ref": "soil_thresholds.json#<region>",
+  "rules": [
+    {
+      "rule_id": "r_<TBD>",
+      "when": {"all": [{"param": "N", "op": "lt", "value_ref": "thresholds.N.low"}]},
+      "then": [
+        {
+          "action_id": "a_<TBD>",
+          "fertilizer_id": "urea",
+          "dose": {"value": "<TBD>", "unit": "kg", "basis": "per_acre"},
+          "timing": "basal",
+          "method": "broadcast",
+          "reason_key": "reason.n_low_basal",
+          "cautions": []
+        }
+      ]
+    }
+  ]
+}

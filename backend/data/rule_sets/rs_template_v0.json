@@ -1,0 +1,26 @@
+{
+  "rule_set_id": "rs_template_v0",
+  "version": "0.1.0-draft",
+  "status": "draft",
+  "crop_id": "wheat",
+  "region_id": "IN-PB",
+  "stage_id": "basal",
+  "effective_from": "2020-01-01",
+  "source": {"document": "DRAFT TEMPLATE", "publisher": "test-suite",
+             "url": "https://example.invalid/template"},
+  "validated_by": {"agronomist": "test-suite", "date": "2020-01-01"},
+  "thresholds_ref": "soil_thresholds.json#IN-PB",
+  "rules": [
+    {
+      "rule_id": "r_template_n_low",
+      "when": {"all": [{"param": "N", "op": "lt", "value_ref": "thresholds.N.low"}]},
+      "then": [{
+        "action_id": "a_template_urea_basal",
+        "fertilizer_id": "urea",
+        "dose": {"value": "<TBD>", "unit": "kg", "basis": "per_acre"},
+        "timing": "basal", "method": "broadcast",
+        "reason_key": "reason.n_low_basal", "cautions": []
+      }]
+    }
+  ]
+}

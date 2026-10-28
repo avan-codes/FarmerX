@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+.env
+.venv/
+
+# Virtualenv
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Runtime data (generated at runtime, not committed)
+backend/data/store/
+backend/data/data/
+backend/.venv/
+
+# Test caches
+backend/.pytest_cache/
+backend/tests/__pycache__/
+
+# PDF cache
+backend/data/store/_pdf_cache/
+backend/**/_pdf_cache/
+
+# Build artifacts
+backend/farmerx_backend.egg-info/
+backend/*.egg-info/
+backend/scripts/*.ttf
+backend/scripts/base#1.ttf
+backend/routers/
+
+# Logs
+*.log

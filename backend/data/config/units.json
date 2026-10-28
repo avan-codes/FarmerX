@@ -1,0 +1,20 @@
+{
+  "area_base_unit": "hectare",
+  "quantity_base_unit": "kg",
+  "area": [
+    {"id": "hectare",      "label_key": "unit.hectare",      "to_base_factor": "1",              "available": true},
+    {"id": "acre",         "label_key": "unit.acre",         "to_base_factor": "0.40468564224",  "available": true},
+    {"id": "square_metre", "label_key": "unit.square_metre", "to_base_factor": "0.0001",         "available": true},
+    {"id": "bigha",        "label_key": "unit.bigha",        "available": false, "region_scoped": true,
+     "note": "Region-scoped; factor must be defined per district before enabling."}
+  ],
+  "quantity": [
+    {"id": "kg", "label_key": "unit.kg", "to_base_factor": "1",     "available": true},
+    {"id": "g",  "label_key": "unit.g",  "to_base_factor": "0.001", "available": true},
+    {"id": "l",  "label_key": "unit.l",  "available": false,
+     "note": "Requires product density; unavailable until defined."},
+    {"id": "ml", "label_key": "unit.ml", "available": false,
+     "note": "Requires product density; unavailable until defined."}
+  ],
+  "basis": {"per_acre": {"unit": "acre"}, "per_hectare": {"unit": "hectare"}}
+}

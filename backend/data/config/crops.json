@@ -1,0 +1,5 @@
+{"crops": [
+  {"id": "wheat", "label_key": "crop.wheat", "active": true},
+  {"id": "rice",  "label_key": "crop.rice",  "active": true},
+  {"id": "testcrop", "label_key": "crop.testcrop", "active": true}
+]}

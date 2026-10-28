@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="{{ language }}">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: '{{ fonts.family }}'; font-weight: normal;
+               src: url('file://{{ fonts.regular }}') format('truetype'); }
+  @font-face { font-family: '{{ fonts.family }}'; font-weight: bold;
+               src: url('file://{{ fonts.bold }}') format('truetype'); }
+  @font-face { font-family: 'NotoSans'; font-weight: normal;
+               src: url('file://{{ fonts.latin }}') format('truetype'); }
+  @page { size: A4; margin: 18mm 16mm; }
+  body { font-family: '{{ fonts.family }}', 'NotoSans', sans-serif;
+         font-size: 11pt; color: #1a1a1a; }
+  h1 { font-size: 18pt; margin: 0 0 4mm; }
+  h2 { font-size: 13pt; margin: 7mm 0 2mm; border-bottom: 1px solid #ccc;
+       padding-bottom: 1mm; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 2mm; border-bottom: 1px solid #e2e2e2;
+           vertical-align: top; }
+  th { background: #f3f6f2; font-weight: bold; }
+  .muted { color: #555; font-size: 9pt; }
+  .cautions { color: #7a3b00; }
+  .footer { margin-top: 8mm; font-size: 8.5pt; color: #666; }
+</style>
+</head>
+<body>
+  <h1>{{ labels['pdf.title'] }}</h1>
+  <p class="muted">{{ rec.context.crop }} · {{ rec.context.region }} ·
+     {{ rec.context.stage }} · {{ rec.context.farm_area.value }}
+     {{ rec.context.farm_area.unit }}</p>
+
+  <h2>{{ labels['pdf.soil_summary'] }}</h2>
+  <table>
+    <tr><th>Parameter</th><th>Value</th><th>Category</th></tr>
+    {% for p in rec.soil_parameters %}
+    <tr><td>{{ p.param }}</td><td>{{ p.value }} {{ p.unit }}</td>
+        <td>{{ p.category or '—' }}</td></tr>
+    {% endfor %}
+  </table>
+
+  {% if rec.status == 'ok' %}
+  <h2>{{ labels['pdf.plan'] }}</h2>
+  <table>
+    <tr>
+      <th>{{ labels['pdf.fertilizer'] }}</th>
+      <th>{{ labels['pdf.quantity'] }}</th>
+      <th>{{ labels['pdf.timing'] }}</th>
+      <th>{{ labels['pdf.method'] }}</th>
+      <th>{{ labels['pdf.reason'] }}</th>
+    </tr>
+    {% for item in rec['items'] %}
+    <tr>
+      <td>{{ item.fertilizer.name }}</td>
+      <td>{{ item.quantity.display }}</td>
+      <td>{{ item.timing_label }}</td>
+      <td>{{ item.method_label }}</td>
+      <td>{{ item.reason }}
+          {% if item.cautions %}<div class="cautions">
+            {% for c in item.cautions %}{{ c }}{% endfor %}</div>{% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p class="cautions">{{ labels['pdf.no_rule'] }}</p>
+  {% endif %}
+
+  {% if ai_text %}
+  <h2>AI</h2>
+  <p>{{ ai_text }}</p>
+  {% endif %}
+
+  <h2>{{ labels['pdf.source'] }}</h2>
+  {% set src = (rec['items'][0].source if rec['items'] else {}) %}
+  <p class="muted">
+    {{ src.rule_set_id or '—' }} v{{ src.rule_set_version or '—' }}<br>
+    {{ src.document or '' }} — {{ src.publisher or '' }}
+    {% if src.url %}<br>{{ src.url }}{% endif %}
+  </p>
+
+  <p class="footer">
+    {{ labels['pdf.disclaimer'] }}<br>
+    {{ labels['pdf.report_id'] }}: {{ rec.recommendation_id }} ·
+    {{ labels['pdf.generated'] }}: {{ rec.generated_at }}
+  </p>
+</body>
+</html>
