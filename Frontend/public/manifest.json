@@ -1,0 +1,20 @@
+{
+  "name": "FarmerX",
+  "short_name": "FarmerX",
+  "description": "Soil-to-action fertilizer planning with validated agronomic rules.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f3ea",
+  "theme_color": "#2d5a3d",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

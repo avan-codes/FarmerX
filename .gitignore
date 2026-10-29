@@ -47,3 +47,9 @@ backend/routers/
 
 # Logs
 *.log
+
+# Frontend
+Frontend/node_modules/
+Frontend/dist/
+Frontend/.env
+Frontend/.vite/
