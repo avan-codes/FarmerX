@@ -7,7 +7,7 @@ def test_summary_endpoint_and_detail_attach(client, farmer_headers,
                                             valid_payload):
     rec = _create_rec(client, farmer_headers, valid_payload)
     from tests.fakes import FakeProvider
-    fake = FakeProvider(['{"text":"Apply 100 kg urea at sowing."}'])
+    fake = FakeProvider(['{"text":"Apply 90 kg urea at sowing."}'])
     client.app.state.ai_service.provider = fake
 
     response = client.post(
@@ -16,7 +16,7 @@ def test_summary_endpoint_and_detail_attach(client, farmer_headers,
     assert response.status_code == 200
     body = response.json()
     assert body["ai_status"] == "ok"
-    assert "100 kg" in body["ai_summary"]["text"]
+    assert "90 kg" in body["ai_summary"]["text"]
 
     detail = client.get(
         f"/api/v1/recommendations/{rec['recommendation_id']}",
@@ -37,7 +37,7 @@ def test_summary_is_scoped_to_owner(client, farmer_headers,
 def test_assistant_flow(client, farmer_headers, valid_payload):
     rec = _create_rec(client, farmer_headers, valid_payload)
     from tests.fakes import FakeProvider
-    fake = FakeProvider(['{"text":"Apply 100 kg urea at sowing."}'])
+    fake = FakeProvider(['{"text":"Apply 90 kg urea at sowing."}'])
     client.app.state.ai_service.provider = fake
 
     response = client.post(

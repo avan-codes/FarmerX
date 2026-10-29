@@ -37,8 +37,8 @@ def other_farmer_headers(): return {"X-Farmer-Id": "farmer_B"}
 @pytest.fixture
 def valid_payload():
     return {
-        "soil_values": {"N": 100, "P": 20, "K": 150, "pH": 6.8, "OC": 0.4},
-        "crop_id": "testcrop", "region_id": "TESTREGION", "stage_id": "basal",
+        "soil_values": {"N": 45, "P": 25, "K": 180, "pH": 6.8, "OC": 0.8},
+        "crop_id": "wheat", "region_id": "IN-PB", "stage_id": "basal",
         "area": {"value": 2, "unit": "acre"}, "language": "en",
     }
 
@@ -75,11 +75,11 @@ def rec(config):
         "user_id": "farmer_A",
         "status": "ok",
         "input_hash": "sha256:abc",
-        "context": {"crop": "testcrop", "region": "TESTREGION",
+        "context": {"crop": "wheat", "region": "IN-PB",
                     "stage": "basal",
                     "farm_area": {"value": "2", "unit": "acre"},
                     "language": "en"},
-        "soil_parameters": [{"param": "N", "value": "100", "unit": "kg/ha",
+        "soil_parameters": [{"param": "N", "value": "45", "unit": "kg/ha",
                              "category": "low"}],
         "items": [{
             "fertilizer": {"id": "urea", "name": "Urea"},

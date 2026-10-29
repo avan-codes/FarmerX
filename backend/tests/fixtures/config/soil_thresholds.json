@@ -1,10 +1,32 @@
 {
   "regions": {
-    "TESTREGION": {"parameters": {
-      "N":  {"validated": true, "low_below": "150", "high_from": "300"},
-      "P":  {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"},
-      "K":  {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"},
-      "OC": {"validated": false, "low_below": "<TBD>", "high_from": "<TBD>"}
+    "IN-PB": {"parameters": {
+      "N":  {"validated": true, "low_below": "250", "high_from": "500"},
+      "P":  {"validated": true, "low_below": "10", "high_from": "25"},
+      "K":  {"validated": true, "low_below": "125", "high_from": "280"},
+      "OC": {"validated": true, "low_below": "0.5", "high_from": "0.75"},
+      "pH": {"validated": true, "low_below": "6.0", "high_from": "7.5"}
+    }},
+    "IN-MH": {"parameters": {
+      "N":  {"validated": true, "low_below": "250", "high_from": "500"},
+      "P":  {"validated": true, "low_below": "10", "high_from": "25"},
+      "K":  {"validated": true, "low_below": "125", "high_from": "280"},
+      "OC": {"validated": true, "low_below": "0.5", "high_from": "0.75"},
+      "pH": {"validated": true, "low_below": "6.0", "high_from": "7.5"}
+    }},
+    "IN-BR": {"parameters": {
+      "N":  {"validated": true, "low_below": "280", "high_from": "520"},
+      "P":  {"validated": true, "low_below": "12", "high_from": "28"},
+      "K":  {"validated": true, "low_below": "140", "high_from": "300"},
+      "OC": {"validated": true, "low_below": "0.5", "high_from": "0.75"},
+      "pH": {"validated": true, "low_below": "6.0", "high_from": "7.5"}
+    }},
+    "IN-MP": {"parameters": {
+      "N":  {"validated": true, "low_below": "260", "high_from": "510"},
+      "P":  {"validated": true, "low_below": "11", "high_from": "26"},
+      "K":  {"validated": true, "low_below": "130", "high_from": "290"},
+      "OC": {"validated": true, "low_below": "0.5", "high_from": "0.75"},
+      "pH": {"validated": true, "low_below": "6.0", "high_from": "7.5"}
     }}
   }
 }

@@ -9,7 +9,7 @@ def rec(config):
         "user_id": "farmer_A",
         "status": "ok",
         "input_hash": "sha256:abc",
-        "context": {"crop": "testcrop", "region": "TESTREGION",
+        "context": {"crop": "wheat", "region": "IN-PB",
                     "stage": "basal",
                     "farm_area": {"value": "2", "unit": "acre"},
                     "language": "en"},

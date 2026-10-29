@@ -1,4 +1,6 @@
 {"fertilizers":[
   {"id":"urea","label_key":"fert.urea","unit":"kg","active":true},
-  {"id":"dap","label_key":"fert.dap","unit":"kg","active":true}
+  {"id":"dap","label_key":"fert.dap","unit":"kg","active":true},
+  {"id":"mop","label_key":"fert.mop","unit":"kg","active":true},
+  {"id":"vermicompost","label_key":"fert.vermicompost","unit":"kg","active":true}
 ]}

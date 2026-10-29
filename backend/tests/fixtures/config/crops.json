@@ -1,5 +1,4 @@
 {"crops":[
-  {"id":"testcrop","label_key":"crop.testcrop","active":true},
-  {"id":"wheat","label_key":"crop.wheat","active":true},
-  {"id":"rice","label_key":"crop.rice","active":true}
+  {"id":"wheat","label_key":"crop.wheat","unit":"kg","active":true},
+  {"id":"rice","label_key":"crop.rice","unit":"kg","active":true}
 ]}
