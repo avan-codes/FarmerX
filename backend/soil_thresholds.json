@@ -1,0 +1,5 @@
+{"regions":{"TESTREGION":{"parameters":{
+  "N":{"validated":true,"low_below":280,"high_from":560},
+  "P":{"validated":true,"low_below":10,"high_from":25},
+  "K":{"validated":true,"low_below":110,"high_from":280},
+  "OC":{"validated":true,"low_below":0.5,"high_from":0.75}}}}}

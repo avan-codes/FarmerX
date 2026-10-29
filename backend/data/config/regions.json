@@ -1,5 +1,6 @@
 {"regions": [
   {"id": "IN-PB", "label_key": "region.IN-PB", "country": "IN", "level": "state"},
   {"id": "IN-MH", "label_key": "region.IN-MH", "country": "IN", "level": "state"},
-  {"id": "TESTREGION", "label_key": "region.TESTREGION", "country": "IN", "level": "state"}
+  {"id": "IN-BR", "label_key": "region.IN-BR", "country": "IN", "level": "state"},
+  {"id": "IN-MP", "label_key": "region.IN-MP", "country": "IN", "level": "state"}
 ]}

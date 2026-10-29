@@ -1,0 +1,139 @@
+{
+  "rule_set_id": "rs_in-mp_rice_vegetative_v1",
+  "version": "1.0.0",
+  "status": "approved",
+  "crop_id": "rice",
+  "region_id": "IN-MP",
+  "stage_id": "vegetative",
+  "effective_from": "2020-01-01",
+  "source": {
+    "document": "Madhya Pradesh Package of Practices \u2014 Rice, vegetative",
+    "publisher": "FarmerX",
+    "url": "https://example.invalid/in-mp-rice-vegetative"
+  },
+  "validated_by": {
+    "agronomist": "FarmerX",
+    "date": "2020-01-01"
+  },
+  "thresholds_ref": "soil_thresholds.json#IN-MP",
+  "rules": [
+    {
+      "rule_id": "r_rice_IN-MP_vegetative_n_low",
+      "when": {
+        "all": [
+          {
+            "param": "N",
+            "op": "lt",
+            "value_ref": "thresholds.N.low"
+          }
+        ]
+      },
+      "then": [
+        {
+          "action_id": "a_rice_IN-MP_vegetative_urea_vegetative",
+          "fertilizer_id": "urea",
+          "dose": {
+            "value": "40",
+            "unit": "kg",
+            "basis": "per_acre"
+          },
+          "timing": "top_dress",
+          "method": "broadcast",
+          "reason_key": "reason.n_low_vegetative",
+          "cautions": []
+        }
+      ]
+    },
+    {
+      "rule_id": "r_rice_IN-MP_vegetative_p_low",
+      "when": {
+        "all": [
+          {
+            "param": "P",
+            "op": "lt",
+            "value_ref": "thresholds.P.low"
+          }
+        ]
+      },
+      "then": [
+        {
+          "action_id": "a_rice_IN-MP_vegetative_dap_vegetative",
+          "fertilizer_id": "dap",
+          "dose": {
+            "value": "30",
+            "unit": "kg",
+            "basis": "per_acre"
+          },
+          "timing": "top_dress",
+          "method": "broadcast",
+          "reason_key": "reason.p_low_vegetative",
+          "cautions": []
+        }
+      ]
+    },
+    {
+      "rule_id": "r_rice_IN-MP_vegetative_k_low",
+      "when": {
+        "all": [
+          {
+            "param": "K",
+            "op": "lt",
+            "value_ref": "thresholds.K.low"
+          }
+        ]
+      },
+      "then": [
+        {
+          "action_id": "a_rice_IN-MP_vegetative_mop_vegetative",
+          "fertilizer_id": "mop",
+          "dose": {
+            "value": "25",
+            "unit": "kg",
+            "basis": "per_acre"
+          },
+          "timing": "top_dress",
+          "method": "broadcast",
+          "reason_key": "reason.k_low_vegetative",
+          "cautions": []
+        }
+      ]
+    },
+    {
+      "rule_id": "r_rice_IN-MP_vegetative_soil_adequate",
+      "when": {
+        "all": [
+          {
+            "param": "N",
+            "op": "gte",
+            "value_ref": "thresholds.N.low"
+          },
+          {
+            "param": "P",
+            "op": "gte",
+            "value_ref": "thresholds.P.low"
+          },
+          {
+            "param": "K",
+            "op": "gte",
+            "value_ref": "thresholds.K.low"
+          }
+        ]
+      },
+      "then": [
+        {
+          "action_id": "a_rice_IN-MP_vegetative_vermicompost_adequate",
+          "fertilizer_id": "vermicompost",
+          "dose": {
+            "value": "0",
+            "unit": "kg",
+            "basis": "per_acre"
+          },
+          "timing": "top_dress",
+          "method": "broadcast",
+          "reason_key": "reason.soil_adequate",
+          "cautions": []
+        }
+      ]
+    }
+  ]
+}
